@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.robot.commands.DifferentialDriveWithJoysticks;
 import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.Shooter;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -20,6 +21,7 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
   public static Drivetrain m_drivetrain;
+  public static Shooter m_shooter;
   public static RobotContainer m_robotContainer;
 
   /**
@@ -31,6 +33,7 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_drivetrain = new Drivetrain();
+    m_shooter = new Shooter();
     m_robotContainer = new RobotContainer();
   }
 
